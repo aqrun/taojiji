@@ -9,6 +9,12 @@ verify_ssl = true
 flask = "*"
 simplejson = "*"
 python-dotenv = "*"
+watchdog = "*"
+sqlalchemy = "*"
+flask-security = "*"
+flask-script = "*"
+flask-migrate = "*"
+pymysql = "*"
 
 [requires]
 python_version = "3.7"
