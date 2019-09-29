@@ -15,7 +15,8 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     publicPath: process.env.NODE_ENV === 'production' ? config.build.assetsPublicPath : config.dev.assetsPublicPath,
-    filename: '[name].js'
+    filename: '[name].js',
+    chunkFilename: '[name].bundle.js'
   },
   resolve:{
     modules: ['node_modules', configPathes.appNodeModules].concat(
@@ -85,11 +86,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: [
-          { loader: require.resolve('babel-loader') },
-          { loader: require.resolve('ts-loader') },
-        ]
-
+        use: 'ts-loader'
       }
     ]
   }

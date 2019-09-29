@@ -15,6 +15,7 @@ flask-security = "*"
 flask-script = "*"
 flask-migrate = "*"
 pymysql = "*"
+bcrypt = "*"
 
 [requires]
 python_version = "3.7"

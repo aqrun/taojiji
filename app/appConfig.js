@@ -41,7 +41,7 @@ module.exports = {
   htmlRemoveComments: false,
   htmlCollapseWhitespace: false,
   //静态资源路径
-  injectAssetsPublicPath:'',
+  injectAssetsPublicPath:'/static/dist/',
   //静态资源目录 url可为空
   staticAssetsPath:{
     html:{url:'/html', dir:htmlDir},

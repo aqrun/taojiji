@@ -12,8 +12,9 @@
 import os
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
+from flask_security.utils import hash_password
 from app import app
-from app.models import Base
+from app.models import Base, db_session
 from app.models.user_role import User, Role, RolesUsers
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('MYSQL')
@@ -24,9 +25,15 @@ manager.add_command('db', MigrateCommand)
 
 
 @manager.command
-def test():
-    print(app.config)
-    print('this is test')
+def add_user():
+    user = User(
+        email='a@a.com',
+        username='Alex',
+        active=True
+    )
+    user.password = hash_password('pass2019')
+    db_session.add(user)
+    db_session.commit()
 
 
 if __name__ == '__main__':

@@ -1,10 +1,21 @@
 {
   "compilerOptions": {
-      "module": "commonjs",
-      "noImplicitAny": true,
-      "removeComments": true,
-      "preserveConstEnums": true,
-      "sourceMap": true
+    "module": "esnext",
+    "noImplicitAny": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "inlineSourceMap": true,
+    "sourceMap": false,
+    "allowJs": true,
+    "lib": [
+      "dom",
+      "es2015",
+      "esnext"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "app/*": ["./app/web/src/*"]
+    }
   },
   "include": [
     "app/web/src/**/*"

@@ -1,15 +1,20 @@
+/// <reference path="global.d.ts" />
+import 'babel-polyfill';
+
+import { common } from './common'
+import { current_path_in } from './common/utils'
 
 import './css/style.scss'
 
-let username: string = 'Alex'
+window.g = window.g || {};
+let g = window.g;
+g['name'] = "test";
 
-class Dog{
-    name: string;
-    age: number;
-    eat(){
-        console.log('im eating')
-    }
+function main($: any){
+    common();
+
+    if(current_path_in('/')){import('app/main').then(m=>{m.init()})}
+    if(current_path_in('/login')){import('app/auth').then(m=>{m.init()})}
 }
-let d = new Dog()
-d.eat()
-console.log(username)
+
+($=>{$(()=>{main($)})})(jQuery)

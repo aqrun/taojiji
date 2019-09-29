@@ -1,3 +1,42 @@
 body{
-  padding-top:30px;
+  padding-top:50px;
+}
+h1{
+  font-size: 36px;
+}
+.blog-footer{
+  text-align: center;
+}
+
+.loginw{
+  margin: 100px auto;
+  width:400px;
+  .s1{
+     label{
+      display: block;
+      margin-top:30px;
+       color:#555;
+    }
+    input{
+      display: block;
+      font-size: 14px;
+      padding: 10px 10px;
+      border: 1px solid #d1d1d1;
+      width: 100%;
+    }
+  }
+  .s2{
+    margin-top:15px;
+  }
+  #submit{
+    display: block;
+    border:0;
+    background: #3A7734;
+    color:white;
+    width:100%;
+    padding: 10px;
+    border-radius: 3px;
+    margin-top:30px;
+  }
+
 }

@@ -1,0 +1,506 @@
+# Chinese (Simplified, China) translations for PROJECT.
+# Copyright (C) 2019 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-09-28 15:05+0800\n"
+"PO-Revision-Date: 2019-09-28 15:07+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_script/__init__.py:43
+msgid "show this help message and exit"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:99
+msgid "Login Required"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:100
+msgid "Welcome"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:101
+msgid "Please confirm your email"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:102
+msgid "Login instructions"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:103
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/reset_notice.html:1
+msgid "Your password has been reset"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:104
+msgid "Your password has been changed"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:106
+msgid "Password reset instructions"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:132
+msgid "You do not have permission to view this resource."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:134
+#, python-format
+msgid "Thank you. Confirmation instructions have been sent to %(email)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:138
+msgid "Thank you. Your email has been confirmed."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:140
+msgid "Your email has already been confirmed."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:142
+msgid "Invalid confirmation token."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:144
+#, python-format
+msgid "%(email)s is already associated with an account."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:146
+msgid "Password does not match"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:148
+msgid "Passwords do not match"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:150
+msgid "Redirections outside the domain are forbidden"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:152
+#, python-format
+msgid "Instructions to reset your password have been sent to %(email)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:155
+#, python-format
+msgid ""
+"You did not reset your password within %(within)s. New instructions have "
+"been sent to %(email)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:158
+msgid "Invalid reset password token."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:160
+msgid "Email requires confirmation."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:162
+#, python-format
+msgid "Confirmation instructions have been sent to %(email)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:164
+#, python-format
+msgid ""
+"You did not confirm your email within %(within)s. New instructions to "
+"confirm your email have been sent to %(email)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:168
+#, python-format
+msgid ""
+"You did not login within %(within)s. New instructions to login have been "
+"sent to %(email)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:171
+#, python-format
+msgid "Instructions to login have been sent to %(email)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:173
+msgid "Invalid login token."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:175
+msgid "Account is disabled."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:177
+msgid "Email not provided"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:179
+msgid "Invalid email address"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:181
+msgid "Password not provided"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:183
+msgid "No password is set for this user"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:185
+msgid "Password must be at least 6 characters"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:187
+msgid "Specified user does not exist"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:189
+msgid "Invalid password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:191
+msgid "You have successfully logged in."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:193
+msgid "Forgot password?"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:195
+msgid ""
+"You successfully reset your password and you have been logged in "
+"automatically."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:198
+msgid "Your new password must be different than your previous password."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:201
+msgid "You successfully changed your password."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:203
+msgid "Please log in to access this page."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/core.py:205
+msgid "Please reauthenticate to access this page."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:30
+msgid "Email Address"
+msgstr "邮箱"
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:31
+msgid "Password"
+msgstr "密码"
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:32
+msgid "Remember Me"
+msgstr "记住我"
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:33
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/_menu.html:4
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/login_user.html:3
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/send_login.html:3
+#: app/templates/security/login_user.html:7
+msgid "Login"
+msgstr "登录"
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:34
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/_menu.html:6
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/register_user.html:3
+msgid "Register"
+msgstr "注册"
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:35
+msgid "Resend Confirmation Instructions"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:36
+msgid "Recover Password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:37
+msgid "Reset Password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:38
+msgid "Retype Password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:39
+msgid "New Password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:40
+msgid "Change Password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/forms.py:41
+msgid "Send Login Link"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/_menu.html:2
+msgid "Menu"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/_menu.html:9
+msgid "Forgot password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/_menu.html:12
+msgid "Confirm account"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/change_password.html:3
+msgid "Change password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/forgot_password.html:3
+msgid "Send password reset instructions"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/reset_password.html:3
+msgid "Reset password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/send_confirmation.html:3
+msgid "Resend confirmation instructions"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/change_notice.html:1
+msgid "Your password has been changed."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/change_notice.html:3
+msgid "If you did not change your password,"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/change_notice.html:3
+msgid "click here to reset it"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/confirmation_instructions.html:1
+msgid "Please confirm your email through the link below:"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/confirmation_instructions.html:3
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/welcome.html:6
+msgid "Confirm my account"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/login_instructions.html:1
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/welcome.html:1
+#, python-format
+msgid "Welcome %(email)s!"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/login_instructions.html:3
+msgid "You can log into your account through the link below:"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/login_instructions.html:5
+msgid "Login now"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/reset_instructions.html:1
+msgid "Click here to reset your password"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_security/templates/security/email/welcome.html:4
+msgid "You can confirm your email through the link below:"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_wtf/file.py:51
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:205
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:245
+msgid "This field is required."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_wtf/file.py:85
+msgid "File does not have an approved extension: {extensions}"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/flask_wtf/file.py:90
+msgid "File does not have an approved extension."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/passlib/ext/django/utils.py:957
+msgid "algorithm"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:58
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:66
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:99
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:102
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:105
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:141
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:143
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:145
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:277
+msgid "Invalid input."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:311
+msgid "Invalid email address."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:352
+msgid "Invalid IP address."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:403
+msgid "Invalid Mac address."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:432
+msgid "Invalid URL."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:452
+msgid "Invalid UUID."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:482
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/validators.py:514
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/csrf/core.py:98
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/csrf/form.py:47
+msgid "Invalid CSRF Token"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/csrf/session.py:61
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/csrf/session.py:58
+msgid "CSRF token missing"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/csrf/session.py:69
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/csrf/session.py:66
+msgid "CSRF failed"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/csrf/session.py:74
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/csrf/session.py:71
+msgid "CSRF token expired"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/appengine/fields.py:87
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/appengine/fields.py:164
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/appengine/fields.py:166
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/django/fields.py:95
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:125
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:127
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:180
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py:185
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:475
+msgid "Not a valid choice"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/appengine/fields.py:185
+msgid "Not a valid list"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/appengine/fields.py:204
+msgid "Not a valid integer list"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/dateutil/fields.py:63
+msgid "Please input a date/time value"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/dateutil/fields.py:75
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/ext/dateutil/fields.py:83
+msgid "Invalid date/time input"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:468
+msgid "Invalid Choice: could not coerce"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:501
+msgid "Invalid choice(s): one or more data inputs could not be coerced"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:508
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:591
+msgid "Not a valid integer value"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:657
+msgid "Not a valid decimal value"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:684
+msgid "Not a valid float value"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:745
+msgid "Not a valid datetime value"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:762
+msgid "Not a valid date value"
+msgstr ""
+
+#: PIPENV_VENV_IN_PROJECT/taojiji-KIWgSPbf/Lib/site-packages/wtforms/fields/core.py:779
+msgid "Not a valid time value"
+msgstr ""
+
