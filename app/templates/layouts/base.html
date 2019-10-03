@@ -10,11 +10,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='dist/app.%s.css' % config.asset_hash) }}" rel="stylesheet">
+    {% include 'layouts/css.html' %}
 
-    <script src="{{ url_for('static', filename='plugins/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='dist/app.%s.js' % config.asset_hash) }}"></script>
+
   </head>
 
   <body>
@@ -66,5 +64,9 @@
       </p>
     </footer>
 
+
+<script src="{{ url_for('static', filename='plugins/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    {% include 'layouts/js.html' %}
   </body>
 </html>
