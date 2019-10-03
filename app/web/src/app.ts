@@ -1,5 +1,4 @@
 /// <reference path="global.d.ts" />
-import 'babel-polyfill';
 
 import { common } from './common'
 import { current_path_in } from './common/utils'
@@ -10,11 +9,11 @@ window.g = window.g || {};
 let g = window.g;
 g['name'] = "test";
 
-function main($: any){
+function main(){
     common();
 
     if(current_path_in('/')){import('app/main').then(m=>{m.init()})}
     if(current_path_in('/login')){import('app/auth').then(m=>{m.init()})}
 }
 
-($=>{$(()=>{main($)})})(jQuery)
+($=>{$(()=>{main()})})(jQuery);

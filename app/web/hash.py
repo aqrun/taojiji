@@ -1,1 +1,1 @@
-asset_hash = 'b01514381dbfe4b2f4b1'
+asset_hash = '15d50be294a5263725b2'
