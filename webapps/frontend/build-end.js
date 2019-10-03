@@ -79,7 +79,7 @@ function handleDirectory(src, dist, type=''){
                     jsMain = `<script src="{{ url_for('static', filename='`+ fileUri +`') }}"></script>`;
                 }else if(key === 'runtime-main'){
                     jsRunntime = `<script>`+ fileContent +`</script>`;
-                }else{
+                }else if(key === '2'){
                     jsArr.push(`<script src="{{ url_for('static', filename='`+ fileUri +`') }}"></script>`);
                 }
             }

@@ -1,12 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+/// <reference path="global.d.ts" />
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { common } from './common'
+import { current_path_in } from './common/utils'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import './css/style.scss'
+
+window.g = window.g || {};
+let g = window.g;
+g['name'] = "test";
+
+function main(){
+    common();
+
+    if(current_path_in('/')){import('app/main').then(m=>m.init())}
+    if(current_path_in('/login')){import('app/auth').then(m=>m.init())}
+    // import('app/main-test').then(m => m.init());
+}
+main();
