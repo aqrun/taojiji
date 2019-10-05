@@ -46,7 +46,7 @@ function handleDirectory(src, dist, type=''){
     let cssArr = [];
     let jsRunntime = '';
     let jsMain = '';
-    let jsArr = [];
+    let jsvendor = '';
     // //删除历史文件
     travel(dist, function(file){
       fs.unlinkSync(file)
@@ -61,7 +61,7 @@ function handleDirectory(src, dist, type=''){
             let fileUri = 'dist/' + fileName;
             // main.dfca195d.chunk
             let fileRealName = fileArr.name;
-            let fileContent =  fs.readFileSync(file);
+            let fileContent =  fs.readFileSync(file, 'utf-8');
             fs.writeFileSync(distFile,fileContent);
             fs.chmodSync(distFile, '777');
 
@@ -78,9 +78,12 @@ function handleDirectory(src, dist, type=''){
                 if(key === 'main'){
                     jsMain = `<script src="{{ url_for('static', filename='`+ fileUri +`') }}"></script>`;
                 }else if(key === 'runtime-main'){
+                    //console.log('==================',fileContent);
+                    fileContent = fileContent.replace(/\/.*map/ig, '');
+                    fileContent = fileContent.replace(/[\r\n]/i, '');
                     jsRunntime = `<script>`+ fileContent +`</script>`;
-                }else if(key === '2'){
-                    jsArr.push(`<script src="{{ url_for('static', filename='`+ fileUri +`') }}"></script>`);
+                }else if(key === 'vendor'){
+                    jsvendor = `<script src="{{ url_for('static', filename='`+ fileUri +`') }}"></script>`;
                 }
             }
         }
@@ -90,7 +93,7 @@ function handleDirectory(src, dist, type=''){
         fs.writeFileSync(templateCss, cssArr.join('\n'));
     }
     if(type === 'js'){
-        let allJsContent = jsRunntime + '\n' + jsArr.join('\n') + '\n'+ jsMain;
+        let allJsContent = jsRunntime + '\n' + jsvendor + '\n'+ jsMain;
         fs.writeFileSync(templateJs, allJsContent);
     }
 }

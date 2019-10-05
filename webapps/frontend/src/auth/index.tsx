@@ -1,8 +1,8 @@
 
-export function mainModule(){
-    console.log('auth module')
+export function authModule(){
+    //console.log('auth module')
 }
 
 export function init(){
-    mainModule()
+    authModule()
 }

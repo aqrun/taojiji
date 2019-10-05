@@ -1,2 +1,0 @@
-(this.webpackJsonpfrontend=this.webpackJsonpfrontend||[]).push([[3],{8:function(n,t,o){"use strict";function u(){console.log("auth module")}function i(){u()}o.r(t),o.d(t,"mainModule",(function(){return u})),o.d(t,"init",(function(){return i}))}}]);
-//# sourceMappingURL=3.c3bb2ac0.chunk.js.map

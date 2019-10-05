@@ -11,7 +11,7 @@ g['name'] = "test";
 
 function main(){
     common();
-
+    console.log('index main main');
     if(current_path_in('/')){import('app/main').then(m=>m.init())}
     if(current_path_in('/login')){import('app/auth').then(m=>m.init())}
     // import('app/main-test').then(m => m.init());
