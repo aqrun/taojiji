@@ -1,7 +1,7 @@
 /// <reference path="global.d.ts" />
 
 import { common } from './common'
-import { current_path_in } from './common/utils'
+import { getCurrentPath } from './common/utils'
 
 import './css/style.scss'
 
@@ -11,9 +11,13 @@ g['name'] = "test";
 
 function main(){
     common();
-    console.log('index main main');
-    if(current_path_in('/')){import('app/main').then(m=>m.init())}
-    if(current_path_in('/login')){import('app/auth').then(m=>m.init())}
-    // import('app/main-test').then(m => m.init());
+    let allModules:{[index:string] : ()=>{}} = {
+        '/': () => import('app/main').then(m=>m.init()),
+        '/login': () => import('app/auth').then(m=>m.init()),
+    };
+    let current_path:string = getCurrentPath();
+    if(current_path in allModules){
+        allModules[current_path]();
+    }
 }
 main();

@@ -1,6 +1,8 @@
 
 
 interface Window {
-    g: any
+    location_pathname: string,
+    g: any,
+    r: any,
 }
 declare function jQuery(callback: any): void;

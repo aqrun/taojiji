@@ -357,7 +357,7 @@ module.exports = function(webpackEnv) {
     externals: {
       //'react': 'React',
       //'react-dom': 'ReactDOM',
-      'antd': 'antd'
+      //'antd': 'antd'
     },
     module: {
       strictExportPresence: true,

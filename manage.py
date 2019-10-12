@@ -10,12 +10,14 @@
 """
 
 import os
+from sqlalchemy import func, and_, or_
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from flask_security.utils import hash_password
 from app import app
 from app.models import Base, db_session
 from app.models.user_role import User, Role, RolesUsers
+from app.models.taobao_order import TaobaoOrder, TaobaoProduct
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('MYSQL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -36,6 +38,25 @@ def add_user():
     db_session.commit()
 
 
+def set_filter(query):
+    query = query.filter(or_(TaobaoOrder.id > 8, TaobaoOrder.id < 11))
+    #query = query.filter(or_(TaobaoOrder.id < 11))
+    return query
+
+
+@manager.command
+def test():
+    query = db_session.query(TaobaoOrder)
+    query = set_filter(query)
+    print('====', query)
+
+
+"""
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
+python manage.py db --help
+"""
 if __name__ == '__main__':
     manager.run()
 
