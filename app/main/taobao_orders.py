@@ -8,7 +8,7 @@ from .services.taobo_order_service import TaobaoOrderService
 @main.route('/tb-order-list', methods=['POST', 'GET'])
 def order_list():
     current = json_data('current', 1)
-    page_size = json_data('page_size', 10)
+    page_size = json_data('pageSize', 10)
     list_filter = json_data('filter', [])
     order = json_data('order', [])
 

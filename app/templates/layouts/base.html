@@ -11,8 +11,10 @@
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
     {% include 'layouts/css.html' %}
-
-
+    <script type="text/javascript">
+      window.g = window.g || {};
+      g.baseUrl = '/';
+    </script>
   </head>
 
   <body>

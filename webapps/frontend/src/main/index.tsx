@@ -6,7 +6,7 @@ import createSagaMiddleware from 'redux-saga';
 
 import { rootReducer } from "./redux/reducers";
 import { App } from './app';
-import { rootSaga } from './sagas';
+import { rootSaga } from './redux/sagas';
 
 export function mainModule(){
     //console.log('main module running')

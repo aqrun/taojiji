@@ -36,6 +36,7 @@ def add_user():
     user.password = hash_password('pass2019')
     db_session.add(user)
     db_session.commit()
+    print('User add complete, email:a@a.com pass:pass2019')
 
 
 def set_filter(query):
