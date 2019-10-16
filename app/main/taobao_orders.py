@@ -10,8 +10,8 @@ def order_list():
     current = json_data('current', 1)
     page_size = json_data('pageSize', 10)
     list_filter = json_data('filter', [])
-    order = json_data('order', [])
+    sort = json_data('sort', [])
 
     service = TaobaoOrderService()
-    data = service.get_list(current, page_size, list_filter, order)
+    data = service.get_list(current, page_size, list_filter, sort)
     return jsonify(data)

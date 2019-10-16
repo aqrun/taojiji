@@ -1,10 +1,8 @@
 import React, { useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, useStore } from 'react-redux';
 import { Layout, Breadcrumb, Button,Table, Row, Col } from 'antd';
 import {
     pagerSelector,
-    sortSelector,
-    tableDataFetchParamsSelector,
     tableDataSelector,
     tableLoadingSelector
 } from '../redux/selectors/order-list-selectors';
@@ -15,12 +13,10 @@ import { initialSort } from '../redux/reducers/order-list-reducer';
 const { Content } = Layout;
 
 export const OrderList: React.FC = props => {
-    let updatePager = {};
     let table_data = useSelector(tableDataSelector);
     let pager = useSelector(pagerSelector);
-    let sort = useSelector(sortSelector);
     let table_loading = useSelector(tableLoadingSelector);
-    let tableDataFetchParams = useSelector(tableDataFetchParamsSelector);
+    const store = useStore();
     const dispatch = useDispatch();
 
     const columns = [
@@ -31,12 +27,27 @@ export const OrderList: React.FC = props => {
         {title: '收货地址', dataIndex: 'receiver_address', key: 'receiver_address',},
         {title: '快递公司', dataIndex: 'logistic_company_name', key: 'logistic_company_name',},
         {title: '运单号', dataIndex: 'logistic_bill_number', key: 'logistic_bill_number',},
-        {title: '下单时间', dataIndex: 'create_time', key: 'create_time',},
+        {title: '下单时间', dataIndex: 'create_time', key: 'create_time',sorter:true, width:150},
     ];
 
+    const fetchTableList = ()=>{
+        const state = store.getState().orderList.get('table').toJS();
+        // console.log('store', state.pager);
+        //console.log('fetch table list', state.pager);
+        const params = {
+            current: state.pager.current,
+            pageSize: state.pager.pageSize,
+            sort: state.sort,
+            filter: {...state.search_filter, ...state.table_filter},
+        };
+        dispatch(actions.refreshTableList(state.pager, params));
+    };
+
+
     const handleTableChange = (pagination:any, filters:any, sorter:any) => {
+        const state = store.getState().orderList.get('table').toJS();
         //console.log(pagination, filters, sorter);
-        let _pager = {...updatePager,
+        let _pager = {...state.pager,
             current: pagination.current,
             pageSize: pagination.pageSize,
         };
@@ -46,7 +57,7 @@ export const OrderList: React.FC = props => {
         if(typeof sorter.columnKey!='undefined'){
             let key:string = sorter.columnKey;
             let dir = sorter.order == 'ascend'?'asc':'desc';
-            _sort.key = {name: key, dir: dir};
+            _sort[key] = {name: key, dir: dir};
             //current = 1;
             hasOrder = true;
         }
@@ -55,23 +66,13 @@ export const OrderList: React.FC = props => {
 
         dispatch(actions.setPager(_pager));
         dispatch(actions.setSort(_sort));
-        console.log('handle change', _pager, _sort);
+        //console.log('handle change', _pager, _sort);
         setTimeout(()=>{
             fetchTableList();
-        },1000)
+        },0)
     };
-
-    const fetchTableList = ()=>{
-        console.log('fetch table list', updatePager, tableDataFetchParams);
-        dispatch(actions.refreshTableList(updatePager, tableDataFetchParams));
-    };
-    useEffect(()=>{
-        updatePager = pager.toJS();
-        console.log('update', updatePager)
-    });
     //component did mount
     useEffect(() => {
-        updatePager = pager.toJS();
         fetchTableList()
     }, []);
 

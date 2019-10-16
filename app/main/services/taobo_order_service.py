@@ -9,13 +9,17 @@ class TaobaoOrderService:
     def get_list(self,
                  current=1,
                  page_size=10,
-                 list_filter=[],
-                 order=[]):
+                 list_filter=None,
+                 sort=None):
+        list_filter = {} if list_filter is None else list_filter
+        sort = {} if sort is None else sort
+
         records_total = db_session.query(func.count(TaobaoOrder.id)).one()[0]
         records_filtered = self.set_filter(db_session.query(func.count(TaobaoOrder.id)), list_filter).one()[0]
 
         query = self.set_filter(db_session.query(TaobaoOrder), list_filter)
-        query = self.set_order(query, order)
+        query = self.set_sort(query, sort)
+        print(query)
         results = query.limit(page_size).offset((current-1) * page_size).all()
 
         data = []
@@ -45,10 +49,10 @@ class TaobaoOrderService:
     == > < >= <=
     """
     def set_filter(self, query, list_filter):
-        for i in list_filter:
-            name = i['name']
-            value = i['value']
-            _type = i['type']
+        for item in list_filter.values():
+            name = item['name']
+            value = item['value']
+            _type = item['type']
 
             if _type == '==':
                 query = query.filter(getattr(TaobaoOrder, name) == value)
@@ -62,16 +66,11 @@ class TaobaoOrderService:
                 query = query.filter(getattr(TaobaoOrder, name) <= value)
         return query
 
-    def set_order(self, query, order):
-        for i in order:
-            name = i['name']
-            dir = i['dir']
-            sort = asc(getattr(TaobaoOrder, name)) if dir == 'asc' else desc(getattr(TaobaoOrder, name))
+    def set_sort(self, query, sort):
+        for item in sort.values():
+            name = item['name']
+            sort_dir = item['dir']
+            sort = asc(getattr(TaobaoOrder, name)) if sort_dir == 'asc' else desc(getattr(TaobaoOrder, name))
             query = query.order_by(sort)
         return query
 
-    def _generate_order(self, order):
-        _str = ''
-        for v in order:
-            _str += '%s %s' % (v['name'], v['dir'])
-        return _str

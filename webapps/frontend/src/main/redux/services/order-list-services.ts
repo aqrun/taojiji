@@ -16,7 +16,7 @@ export function fetchTableList(params={}){
     };
     //console.log('params',params);
     let ajaxData = {...defaultData, ...params};
-
+    //console.log('ajaxdata', ajaxData);
     let responseIsOk = false;
     return new Promise((resolve, reject) => {
         fetch(url, {
