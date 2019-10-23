@@ -7,6 +7,8 @@
     python manage.py db migrate -m "init migrate"
 # 根据迁移文件操作数据库
     python manage.py db upgrade
+
+    python manage.py db --help
 """
 
 import os
@@ -18,6 +20,8 @@ from app import app
 from app.models import Base, db_session
 from app.models.user_role import User, Role, RolesUsers
 from app.models.taobao_order import TaobaoOrder, TaobaoProduct
+from app.models.file import File
+from app.main.services.file_service import FileService
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('MYSQL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -44,6 +48,13 @@ def set_filter(query):
     #query = query.filter(or_(TaobaoOrder.id < 11))
     return query
 
+@manager.command
+def file_clear():
+    print('文件清除开始')
+    file_service = FileService()
+    file_service.file_clear()
+    print('文件清除结束')
+
 
 @manager.command
 def test():
@@ -52,12 +63,6 @@ def test():
     print('====', query)
 
 
-"""
-python manage.py db init
-python manage.py db migrate
-python manage.py db upgrade
-python manage.py db --help
-"""
 if __name__ == '__main__':
     manager.run()
 

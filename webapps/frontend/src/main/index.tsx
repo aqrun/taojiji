@@ -13,7 +13,7 @@ export function mainModule(){
     const sagaMiddleware = createSagaMiddleware();
     const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
     sagaMiddleware.run(rootSaga);
-
+    window.store = store;
     render(
         <Provider store={store}>
             <App />

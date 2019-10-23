@@ -17,6 +17,8 @@ flask-migrate = "*"
 pymysql = "*"
 bcrypt = "*"
 flask-restful = "*"
+xlrd = "*"
+openpyxl = "*"
 
 [requires]
 python_version = "3.7"

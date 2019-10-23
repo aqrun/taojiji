@@ -2,9 +2,12 @@
 from sqlalchemy import func, desc, asc
 from ...models import db_session
 from ...models.taobao_order import TaobaoOrder
+from . import BaseService
+from ..mixins.taobao_order_mixin import TaobaoOrderMixin
+from ..mixins.excel_handle_mixin import ExcelHandleMixin
 
 
-class TaobaoOrderService:
+class TaobaoOrderService(BaseService, TaobaoOrderMixin, ExcelHandleMixin):
 
     def get_list(self,
                  current=1,
@@ -19,7 +22,7 @@ class TaobaoOrderService:
 
         query = self.set_filter(db_session.query(TaobaoOrder), list_filter)
         query = self.set_sort(query, sort)
-        print(query)
+        # print(query)
         results = query.limit(page_size).offset((current-1) * page_size).all()
 
         data = []
@@ -48,7 +51,8 @@ class TaobaoOrderService:
     """
     == > < >= <=
     """
-    def set_filter(self, query, list_filter):
+    @staticmethod
+    def set_filter(query, list_filter):
         for item in list_filter.values():
             name = item['name']
             value = item['value']
@@ -66,11 +70,14 @@ class TaobaoOrderService:
                 query = query.filter(getattr(TaobaoOrder, name) <= value)
         return query
 
-    def set_sort(self, query, sort):
+    @staticmethod
+    def set_sort(query, sort):
         for item in sort.values():
             name = item['name']
             sort_dir = item['dir']
             sort = asc(getattr(TaobaoOrder, name)) if sort_dir == 'asc' else desc(getattr(TaobaoOrder, name))
             query = query.order_by(sort)
         return query
+
+
 

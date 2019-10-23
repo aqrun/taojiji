@@ -1,4 +1,4 @@
-import { createActionCreator } from 'deox';
+import { createActionCreator, Action } from 'deox';
 
 export const setTableList = createActionCreator(
     'SET_TABLE_LIST',
@@ -39,4 +39,16 @@ export const setUserData = createActionCreator(
     'SET_USER_DATA',
     resolve => (username: string, age: number) => resolve({username, age})
 );
+
+export const setModal = createActionCreator(
+    '[APP]SET_MODAL',
+    resolve => (data) => resolve({data})
+)
+
+export interface OrderListActions {
+    setTableList: Action<string>,
+    refreshTableList:Action<string>,
+    setPager: Action<string>,
+    setModal: (data:any)=>{type:string}
+}
 

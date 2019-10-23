@@ -9,6 +9,7 @@ export const searchFilterSelector = (state: RootReducer) => state.orderList.getI
 export const tableFilterSelector = (state: RootReducer) => state.orderList.getIn(['table', 'table_filter']);
 export const tableLoadingSelector = (state:RootReducer) => state.orderList.getIn(['table', 'loading']);
 export const sortSelector = (state:RootReducer) => state.orderList.getIn(['table', 'sort']);
+export const modalSelector = (state:RootReducer) => state.orderList.getIn(['modal']);
 
 export const filterSelector = createSelector(
     [searchFilterSelector, tableFilterSelector],

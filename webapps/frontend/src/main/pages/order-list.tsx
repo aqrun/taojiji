@@ -1,13 +1,17 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, MouseEvent } from 'react';
 import { useDispatch, useSelector, useStore } from 'react-redux';
 import { Layout, Breadcrumb, Button,Table, Row, Col } from 'antd';
 import {
     pagerSelector,
     tableDataSelector,
-    tableLoadingSelector
+    tableLoadingSelector,
+    modalSelector,
 } from '../redux/selectors/order-list-selectors';
 import * as actions from '../redux/actions/order-list-actions';
 import { initialSort } from '../redux/reducers/order-list-reducer';
+import {
+    InputModal,
+} from '../components';
 
 
 const { Content } = Layout;
@@ -16,6 +20,7 @@ export const OrderList: React.FC = props => {
     let table_data = useSelector(tableDataSelector);
     let pager = useSelector(pagerSelector);
     let table_loading = useSelector(tableLoadingSelector);
+    let modalData = useSelector(modalSelector);
     const store = useStore();
     const dispatch = useDispatch();
 
@@ -29,6 +34,13 @@ export const OrderList: React.FC = props => {
         {title: '运单号', dataIndex: 'logistic_bill_number', key: 'logistic_bill_number',},
         {title: '下单时间', dataIndex: 'create_time', key: 'create_time',sorter:true, width:150},
     ];
+
+    const handleOpenInputModal = (e: MouseEvent)=>{
+        dispatch(actions.setModal({visible:1, type: 'input'}));
+    };
+    const handleOpenHandleModal = (e: MouseEvent)=>{
+        dispatch(actions.setModal({visible:1, type: 'handle'}));
+    };
 
     const fetchTableList = ()=>{
         const state = store.getState().orderList.get('table').toJS();
@@ -86,12 +98,16 @@ export const OrderList: React.FC = props => {
                         </Breadcrumb>
                         <div>
                             <div className="clearfix" style={{margin:'10px 0'}}>
-                                <Button icon="plus" type="primary"
+                                <Button
+                                    onClick={handleOpenInputModal}
+                                    icon="upload"
+                                    type="primary"
                                     size="small"
-                                    >输入淘宝订单</Button>
-                                <Button icon="upload" type="primary"
+                                    >上传订单</Button>
+                                <Button icon="thunderbolt" type="primary"
+                                    onClick={handleOpenHandleModal}
                                     size="small" style={{marginLeft:'15px'}}
-                                    >处理淘集集订单</Button>
+                                    >处理订单</Button>
                             </div>
                             <Table
                                 dataSource={table_data.toJS()}
@@ -103,9 +119,14 @@ export const OrderList: React.FC = props => {
                                 rowKey="id"
                                 />
                         </div>
+                        <InputModal
+                            actions={actions}
+                            dispatch={dispatch}
+                            modalData={modalData}/>
                     </Content>
                 </Col>
             </Row>
+
         </Layout>
     );
 };

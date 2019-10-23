@@ -28,8 +28,14 @@ let table = {
     sort: initialSort,
 };
 
+let modal = {
+    visible: 0,
+    type: 'input', // input | handle
+};
+
 export const initialState = fromJS({
     table,
+    modal,
 });
 
 export const orderListReducer = createReducer(initialState, handleAction => [
@@ -59,6 +65,10 @@ export const orderListReducer = createReducer(initialState, handleAction => [
         let newvalue = {...state.toJS(), ...payload};
         //console.log(newvalue)
         return fromJS(newvalue);
+    }),
+    handleAction(actions.setModal, (state, {payload}) => {
+        let newModal = {...state.get('modal').toJS(), ...payload.data};
+        return state.setIn(['modal'], fromJS(newModal));
     })
 ]);
 
