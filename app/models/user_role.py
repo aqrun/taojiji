@@ -22,7 +22,7 @@ class Role(Base, RoleMixin):
 class User(Base, UserMixin):
     __tablename__ = 'user'
     id = Column(Integer(), primary_key=True)
-    email = Column(String(255), unique=True)
+    email = Column(String(250), unique=True)
     username = Column(String(128))
     password = Column(String(128))
     last_login_at = Column(DateTime())

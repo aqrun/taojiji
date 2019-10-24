@@ -11,7 +11,7 @@ uwsgi -i uwsgi.ini
 ```shell
 # 安装依赖
 sudo apt-get install build-essential python-dev python-setuptools\
- python-pip python-smbus\ libncursesw5-dev libgdbm-dev libc6-dev\
+ python-pip python-smbus libncursesw5-dev libgdbm-dev libc6-dev\
  zlib1g-dev libsqlite3-dev tk-dev\
  libssl-dev openssl libffi-dev
 
