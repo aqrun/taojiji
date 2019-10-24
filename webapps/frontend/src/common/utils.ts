@@ -1,5 +1,7 @@
 import { isArray, isString } from 'lodash';
 
+let g = window.g;
+
 export function current_path_in(path_data: any): boolean {
     let current_path: string = window.location.pathname;
     if('location_pathname' in window){
@@ -21,6 +23,7 @@ export function getCurrentPath() {
     if('location_pathname' in window){
         current_path = window.location_pathname
     }
-    //current_path = current_path.replace(/\//ig, '')
+    current_path = current_path.replace(g.baseUrl, '/');
+    console.log('current_path',current_path)
     return current_path;
 }

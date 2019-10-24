@@ -122,6 +122,7 @@ export const OrderList: React.FC = props => {
                         <InputModal
                             actions={actions}
                             dispatch={dispatch}
+                            fetchTableList={fetchTableList}
                             modalData={modalData}/>
                     </Content>
                 </Col>

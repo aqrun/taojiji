@@ -1,0 +1,16 @@
+[uwsgi]
+chdir=/e/workspace/python/taojiji
+home=./PIPENV_VENV_IN_PROJECT/taojiji-skxRsZxz
+pythonpath = /usr/local/python3.7.5/lib/python3.7/site-packages
+# 127.0.0.1
+socket = 0.0.0.0:3031
+wsgi-file = run.py
+callable = app
+processes = 1
+threads = 1
+pidfile = /var/run/taojiji_uwsgi.pid
+# 使进程在后台运行，并将日志打到指定的日志文件或者udp服务器
+daemonize = /var/log/taojiji_uwsgi.log
+log-maxsize     = 50000000
+mount = /taojiji=run.py
+manage-script-name = true

@@ -21,11 +21,13 @@ const defaultHeaders = {
     'Content-Type': 'multipart/form-data'
 };
 
-interface Props extends FormComponentProps{
+interface Props extends FormComponentProps {
     modalData: iMap<string, string>,
     actions: OrderListActions,
     dispatch: Dispatch,
+    fetchTableList: any
 }
+
 interface RepeatedData {
     receiver_cellphone: string,
     receiver_name: string,
@@ -80,6 +82,8 @@ class InputModal extends React.Component<Props, any>{
                                 downloadUrl: res.url,
                                 repeated: res.repeated
                             })
+                        }else{
+                            this.props.fetchTableList();
                         }
                         message.success(`${info.file.name} 文件上传成功`);
                     }

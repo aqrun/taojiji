@@ -16,7 +16,7 @@ export const initPager = {
 
 
 export const initialSort = {
-    created_at: {name: 'created_at', dir: 'desc'}
+    created_at: {name: 'create_time', dir: 'desc'}
 };
 
 let table = {

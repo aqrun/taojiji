@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/static/dist/",
+  "homepage": "static/dist/",
   "proxy": "http://localhost:5001",
   "dependencies": {
     "@babel/core": "7.6.0",

@@ -1,0 +1,76 @@
+#oicnp.my.conf
+server {
+    listen 80; # IPv4
+    server_name www.oicnp.my;
+
+    ## Parameterization using hostname of access and log filenames.
+    access_log /e/workspace/logs/nginx/oicnp.my_access_en.log;
+    error_log /e/workspace/logs/nginx/oicnp.my_error_en.log;
+    ## Root and index files.
+    root /e/workspace/www;
+    index  index.php index.html index.htm;
+    ## If no favicon exists return a 204 (no content error).
+    location = /favicon.ico {
+        try_files $uri =204;
+        log_not_found off;
+        access_log off;
+    }
+    ## Don't log robots.txt requests.
+    location = /robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+    }
+    ## Try the requested URI as files before handling it to PHP.
+    location / {
+        index index.php index.html;
+        try_files $uri $uri/ /index.php?$args;
+    } # / location
+
+    location /taojiji/favicon.ico {
+          alias /e/workspace/python/taojiji/app/static/favicon.ico;
+    }
+    location ^~ /taojiji/static {
+        alias /e/workspace/python/taojiji/app/static;
+    }
+
+    location /taojiji {
+        uwsgi_pass 0.0.0.0:3031;
+        include uwsgi_params;
+    }
+
+
+
+    ## Regular PHP processing.
+    location ~ \.php$ {
+        try_files  $uri =404;
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+
+    ## Static files
+    location ~* \.1(?:css|gif|htc|ico|js|jpe?g|png|swf|svg)$ {
+        expires max;
+        log_not_found off;
+        ## No need to bleed constant updates. Send the all shebang in one
+        ## fell swoop.
+        tcp_nodelay off;
+        ## Set the OS file cache.
+        open_file_cache max=1000 inactive=120s;
+        open_file_cache_valid 45s;
+        open_file_cache_min_uses 2;
+        open_file_cache_errors off;
+    }
+
+    ## Keep a tab on the 'big' static files.
+    location ~* ^.+\.(?:ogg|pdf|pptx?)$ {
+        expires 30d;
+        ## No need to bleed constant updates. Send the all shebang in one
+        ## fell swoop.
+        tcp_nodelay off;
+    }
+
+} # end http server
+

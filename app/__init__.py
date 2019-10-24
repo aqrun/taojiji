@@ -11,6 +11,7 @@ from .main import main as main_blueprint
 
 app = Flask(__name__)
 
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['SECRET_KEY'] = 'sdfsdfsd'
 app.config['SECURITY_PASSWORD_SALT'] = os.environ.get('SECURITY_PASSWORD_SALT')
 app.config['BABEL_DEFAULT_LOCAL'] = 'zh_CN'
