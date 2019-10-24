@@ -14,8 +14,8 @@ class File(Base):
 
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, nullable=False)
-    name = Column(String(255), nullable=False)
-    uri = Column(String(255), nullable=False)
+    name = Column(String(250), nullable=False)
+    uri = Column(String(250), nullable=False)
     extension = Column(String(32), default='')
     location = Column(String(32), nullable=False)
     status = Column(Integer, default=0)

@@ -16,7 +16,7 @@ class Role(Base, RoleMixin):
     __tablename__ = 'role'
     id = Column(Integer(), primary_key=True)
     name = Column(String(80), unique=True)
-    description = Column(String(255), default='')
+    description = Column(String(250), default='')
 
 
 class User(Base, UserMixin):
