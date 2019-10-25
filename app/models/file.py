@@ -24,7 +24,7 @@ class File(Base):
 
     def get_url(self):
         if self.location == self.LOCATION_LOCAL:
-            return '/' + self.uri
+            return self.uri
         else:
             return self.uri
 

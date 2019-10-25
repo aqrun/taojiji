@@ -79,7 +79,7 @@ class InputModal extends React.Component<Props, any>{
                         if(type === 'handle'){
                             this.setState({
                                 downloadName:res.name,
-                                downloadUrl: res.url,
+                                downloadUrl: g.baseUrl + res.url,
                                 repeated: res.repeated
                             })
                         }else{

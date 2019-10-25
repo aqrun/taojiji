@@ -1,6 +1,8 @@
 [uwsgi]
+uid=www-data
+gid=www-data
 chdir=/e/workspace/python/taojiji
-home=./PIPENV_VENV_IN_PROJECT/taojiji-skxRsZxz
+home= PIPENV_VENV_IN_PROJECT/taojiji-skxRsZxz
 pythonpath = /usr/local/python3.7.5/lib/python3.7/site-packages
 # 127.0.0.1
 socket = 0.0.0.0:3031
