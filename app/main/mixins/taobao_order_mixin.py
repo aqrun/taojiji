@@ -138,7 +138,7 @@ class TaobaoOrderMixin:
 
     def update_data(self, data):
         # current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-        current_time = datetime.now()
+        current_time = datetime.utcnow()
         order: TaobaoOrder = None
         order = db_session.query(TaobaoOrder).filter(
             TaobaoOrder.order_id == data['order_id']
@@ -187,7 +187,7 @@ class TaobaoOrderMixin:
 
     def insert_data(self, data):
         # current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-        current_time = datetime.now()
+        current_time = datetime.utcnow()
         order = TaobaoOrder(
             order_id=data['order_id'],
             buyer_company_name=data['buyer_company_name'],

@@ -51,7 +51,7 @@ def set_filter(query):
 @manager.command
 def file_clear():
     import datetime
-    t = datetime.datetime.now() + datetime.timedelta(hours=8)
+    t = datetime.datetime.utcnow() + datetime.timedelta(hours=8)
     print('文件清除开始 %s' % t.strftime('%Y-%m-%d %H:%M:%S'))
     file_service = FileService()
     file_service.file_clear()
@@ -63,7 +63,7 @@ def test():
     print('====command test')
     import datetime
     f = open('a.txt', 'a')
-    t = datetime.datetime.now() + datetime.timedelta(hours=8)
+    t = datetime.datetime.utcnow() + datetime.timedelta(hours=8)
     s = str(t.strftime('%Y-%m-%d %H:%M:%S'))
     f.write(s + "\n")
     f.close()

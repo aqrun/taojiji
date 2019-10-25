@@ -1,4 +1,4 @@
-
+import datetime
 from sqlalchemy import func, desc, asc
 from ...models import db_session
 from ...models.taobao_order import TaobaoOrder
@@ -27,6 +27,7 @@ class TaobaoOrderService(BaseService, TaobaoOrderMixin, ExcelHandleMixin):
 
         data = []
         for o in results:
+            created_at = o.create_time + datetime.timedelta(hours=8)
             data.append({
                 'id': o.id,
                 'order_id': o.order_id,
@@ -36,7 +37,7 @@ class TaobaoOrderService(BaseService, TaobaoOrderMixin, ExcelHandleMixin):
                 'receiver_cellphone': o.receiver_cellphone,
                 'logistic_company_name': o.logistic_company_name,
                 'logistic_bill_number': o.logistic_bill_number,
-                'created_at': o.create_time.strftime('%Y-%m-%d %H:%M:%S')
+                'created_at': created_at.strftime('%Y-%m-%d %H:%M:%S')
             })
 
         return {
