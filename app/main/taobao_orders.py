@@ -29,10 +29,11 @@ def upload():
             data = _handle_upload(file_data)
         else:
             data = _input_upload(file_data)
-    except:
+    except Exception as e:
         data = {
             'status': 'error',
-            'msg': '文件上传失败'
+            'msg': '文件上传失败',
+            'error': str(e)
         }
 
     return jsonify(data)
