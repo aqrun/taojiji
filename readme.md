@@ -25,5 +25,4 @@ sudo ln -s /usr/local/python3.7/bin/python3.7 /usr/local/bin/python3.7
 
 # 安装pipenv
 python3.7 -m pip install pipenv
-
 ```

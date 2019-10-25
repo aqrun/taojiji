@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# local
+# 每分钟
+# * * * * * /e/workspace/python/taojiji/servers/cron.sh >> /var/log/taojiji_cron.log 2>&1
+# 第天 0点
+# 0 0 * * * /e/workspace/python/taojiji/servers/cron.sh >> /var/log/taojiji_cron.log 2>&1
+# server
+# 0 0 * * * cd /var/webroot/python/taojiji/servers/cron.sh >> /var/log/taojiji_cron.log 2>&1
+
+echo "Cron start"
+export WORKON_HOME=PIPENV_VENV_IN_PROJECT
+
+# local
+cd /e/workspace/python/taojiji
+/usr/local/bin/python3.7 -m pipenv run python manage.py file_clear
+
+# server
+# cd /var/webroot/python/taojiji
+# /usr/local/python3.7/bin/python3.7 -m pipenv run python manage.py file_clear

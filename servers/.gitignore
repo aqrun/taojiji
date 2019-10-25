@@ -1,2 +1,3 @@
 uwsgi.ini
 nginx.conf
+cron.sh

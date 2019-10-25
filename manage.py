@@ -50,7 +50,9 @@ def set_filter(query):
 
 @manager.command
 def file_clear():
-    print('文件清除开始')
+    import datetime
+    t = datetime.datetime.now() + datetime.timedelta(hours=8)
+    print('文件清除开始 %s' % t.strftime('%Y-%m-%d %H:%M:%S'))
     file_service = FileService()
     file_service.file_clear()
     print('文件清除结束')
@@ -58,9 +60,13 @@ def file_clear():
 
 @manager.command
 def test():
-    query = db_session.query(TaobaoOrder)
-    query = set_filter(query)
-    print('====', query)
+    print('====command test')
+    import datetime
+    f = open('a.txt', 'a')
+    t = datetime.datetime.now() + datetime.timedelta(hours=8)
+    s = str(t.strftime('%Y-%m-%d %H:%M:%S'))
+    f.write(s + "\n")
+    f.close()
 
 
 if __name__ == '__main__':
