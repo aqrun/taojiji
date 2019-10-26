@@ -182,7 +182,7 @@ class TaobaoOrderMixin:
         except Exception as err:
             db_session.rollback()
             # print('Updated error: ', err)
-            self.add_error('updated', err.__str__())
+            self.add_error('updated', str(err))
             return False
 
     def insert_data(self, data):
@@ -231,7 +231,7 @@ class TaobaoOrderMixin:
             return True
         except Exception as err:
             db_session.rollback()
-            self.add_error('insert', err.__str__())
+            self.add_error('insert', str(err))
             # print('Insert error: ', err)
             return False
 

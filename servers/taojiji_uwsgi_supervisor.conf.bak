@@ -1,0 +1,16 @@
+; taojiji_uwsgi_supervisor.conf
+; sudo ln -s /var/webroot/python/taojiji/servers/taojiji_uwsgi_supervisor.conf /etc/supervisor/conf.d/taojiji_uwsgi_supervisor.conf
+[program:taojiji_uwsgi_worker]
+process_name=%(program_name)s_%(process_num)02d
+directory=/var/webroot/python/taojiji
+environment=WORKON_HOME=PIPENV_VENV_IN_PROJECT
+command=/root/.local/bin/uwsgi --ini servers/uwsgi.ini
+stopasgroup=true
+stopsignal=QUIT
+autostart = true
+user=root
+startsecs = 5
+autorestart = true
+redirect_stderr = true ;把 stderr 重定向到 stdout，默认 false
+stdout_logfile = /var/log/supervisor/taojiji_uwsgi_stdout.log
+stderr_logfile = /var/log/supervisor/taojiji_uwsgi_err.log

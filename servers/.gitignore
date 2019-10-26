@@ -1,3 +1,4 @@
 uwsgi.ini
 nginx.conf
 cron.sh
+taojiji_uwsgi_supervisor.conf
