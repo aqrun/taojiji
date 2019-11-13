@@ -15,7 +15,7 @@ def logout():
     return redirect('/')
 
 
-@main.route('/uwsgi-restart')
+# @main.route('/uwsgi-restart')
 def uwsgi():
     import subprocess
     import os
