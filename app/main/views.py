@@ -17,6 +17,6 @@ def logout():
 @main.route('/uwsgi-restart')
 def uwsgi():
     import subprocess
-    shell = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../servers/close_uwsgi.sh")))
+    shell = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../servers/close_uwsgi.sh"))
     subprocess.call(['sudo', shell])
     return 'uwsgi reloaded';
