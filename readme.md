@@ -5,8 +5,8 @@
 uwsgi -i uwsgi.ini
 
 
-* [ ] text1
-* [] text2
+* [x] text1
+* [ ] text2
 
 
 ## python 安装
